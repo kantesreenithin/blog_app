@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #FDF6EC;
+  color:#333;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+.animatedButton {
+  animation-duration: 10000ms;
+}
+
+.ql-container{
+  border: none !important;
+}
+
+.ql-toolbar{
+  border: none !important;
+}
+
+
+/* Ensure the Quill content blends with your background */
+.ql-editor {
+  background-color: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+}
+
+/* Remove unwanted highlights */
+.ql-editor * {
+  background: transparent !important;
+}
+
+/* Ensure links and other elements maintain their default styling */
+.ql-editor a {
+  color: blue;
+  text-decoration: underline;
+}
+
+
+
+
+/* Adjust skeleton background to fit your theme */
+.animate-pulse div {
+  background-color: rgba(255, 255, 255, 0.5) !important; /* Softer white */
+}
+
+/* Smooth out the loader */
+.animate-pulse {
+  transition: all 0.3s ease-in-out;
+}
+
