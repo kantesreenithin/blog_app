@@ -114,7 +114,7 @@ const PostMenuActions = ({ post }) => {
     <div className="">
       <h1 className="mt-8 mb-4 text-sm font-medium">Actions</h1>
       {isPending ? (
-        <SkeletonLoader/>
+        <SkeletonLoader />
       ) : error ? (
         "Saved post fetching failed!"
       ) : (

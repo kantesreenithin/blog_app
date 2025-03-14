@@ -29,11 +29,11 @@ function Upload({ children, type, setProgress, setData }) {
     toast.error("Image upload failed!");
   };
   const onSuccess = (res) => {
-    console.log(res);
+    // console.log(res);
     setData(res);
   };
   const onUploadProgress = (progress) => {
-    console.log(progress);
+    // console.log(progress);
     setProgress(Math.round((progress.loaded / progress.total) * 100));
   };
   return (

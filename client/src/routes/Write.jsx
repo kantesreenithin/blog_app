@@ -95,7 +95,7 @@ function Write() {
             <option value="web-design">Web Design</option>
             <option value="development">Development</option>
             <option value="databases">Databases</option>
-            <option value="seo">Sesrch Engines</option>
+            <option value="seo">Search Engines</option>
             <option value="marketing">Marketing</option>
           </select>
         </div>

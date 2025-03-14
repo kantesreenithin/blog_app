@@ -23,31 +23,34 @@ export const addComment = async (req, res) => {
     post: postId,
   });
   const savedComment = await newComment.save();
-  setTimeout(() => {}, 3000);
   res.status(201).json(savedComment);
 };
 
 export const deleteComment = async (req, res) => {
   const clerkUserId = req.auth.userId;
-  const id = req.params.postId;
+  const id = req.params.id;
 
   if (!clerkUserId) {
     return res.status(401).json("Not Authenticated");
   }
-  const user = User.findOne({ clerkUserId });
-
+  
   const role = req.auth.sessionClaims?.metadata?.role || "user";
+  
   if (role === "admin") {
     await Comment.findByIdAndDelete(req.params.id);
     return res.status(200).json("Comment has been deleted");
   }
-
+  
+  const user =await User.findOne({ clerkUserId });
+  
   const deletedComment = await Comment.findOneAndDelete({
     _id: id,
     user: user._id,
   });
+  
   if (!deletedComment) {
     return res.status(403).json("You can only delete your comment!");
   }
+  
   res.status(200).json("Comment Deleted!");
 };

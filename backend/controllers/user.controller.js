@@ -1,16 +1,13 @@
 import User from "../models/user.model.js";
 
 export const getUserSavedPosts = async (req, res) => {
-  const clerkUserId = req.auth?.userId;
+  const clerkUserId = req.auth.userId;
 
   if (!clerkUserId) {
     return res.status(401).json("Not authenticated!");
   }
 
   const user = await User.findOne({ clerkUserId });
-  if (!user) {
-    return res.status(404).json({ error: "User not found!" });
-  }
 
   res.status(200).json(user.savedPosts);
 };

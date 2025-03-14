@@ -27,7 +27,7 @@ function SinglePostPage() {
   if (error) return "Something Went Wrong!" + error.message;
   if (!data) return "Post not Found!";
 
-  console.log(data);
+  // console.log(data);
 
   {
     /* SEO Metadata */

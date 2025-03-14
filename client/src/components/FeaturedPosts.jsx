@@ -78,7 +78,7 @@ function FeaturedPosts() {
               </div>
               {/*title */}
               <Link
-                to="/test"
+                to={posts[1].slug}
                 className="text-base sm:text-lg md:text-2xl lg:text-xl xl:text-2xl font-"
               >
                 {posts[1].title}
@@ -110,7 +110,7 @@ function FeaturedPosts() {
               </div>
               {/*title */}
               <Link
-                to="/test"
+                to={posts[2].slug}
                 className="text-base sm:text-lg md:text-2xl lg:text-xl xl:text-2xl font-"
               >
                 {posts[2].title}
@@ -142,7 +142,7 @@ function FeaturedPosts() {
               </div>
               {/*title */}
               <Link
-                to="/test"
+                to={posts[3].slug}
                 className="text-base sm:text-lg md:text-2xl lg:text-xl xl:text-2xl font-"
               >
                 {posts[3].title}

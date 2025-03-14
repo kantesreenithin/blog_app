@@ -8,7 +8,7 @@ export const getPosts = async (req, res) => {
 
   const query = {};
   
-  console.log(req.query);
+  // console.log(req.query);
 
   const cat = req.query.cat;
   const author = req.query.author;
@@ -79,7 +79,7 @@ export const getPost = async (req, res) => {
 export const createPost = async (req, res) => {
   //check user before create post
   const clerkUserId = req.auth.userId;
-  console.log(req.headers);
+  // console.log(req.headers);
   if (!clerkUserId) {
     return res.status(401).json("Not authenticated!");
   }

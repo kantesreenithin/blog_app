@@ -8,7 +8,7 @@ import axios from "axios";
 const Comment = ({ comment, postId }) => {
   const { user } = useUser();
   const { getToken } = useAuth();
-  const role = user?.publicMetadata?.role;
+  
 
   const queryClient = useQueryClient();
 
@@ -32,7 +32,7 @@ const Comment = ({ comment, postId }) => {
       toast.error(error.response.data);
     },
   });
-
+  const role = user?.publicMetadata?.role;
   return (
     <div className="p-4 bg-slate-50 rounded-xl mb-8">
       <div className="flex items-center gap-4">
