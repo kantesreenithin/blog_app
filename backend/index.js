@@ -9,7 +9,7 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors({ origin: process.env.CLIENT_API, credentials: true }));
+app.use(cors(process.env.CLIENT_API));
 app.use(clerkMiddleware({ authorizedParties: [process.env.CLIENT_API] }));
 app.use("/webhooks", webhookRouter);
 app.use(express.json());
